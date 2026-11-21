@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>7 KAIH · SPARK-7</title>
+  <meta name="description" content="Tujuh Kebiasaan Anak Indonesia Hebat (7 KAIH) dan skor survei siswa untuk tiap kebiasaan.">
+  <meta name="theme-color" content="#0f1433">
+  <link rel="icon" href="assets/square-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    /* "js" hides things that will animate in. If script.js never runs, un-hide them after 4s. */
+    document.documentElement.classList.add('js');
+    setTimeout(function () { if (!window.__spark) document.documentElement.classList.remove('js'); }, 4000);
+  </script>
+</head>
+<body>
+  <div class="progress" aria-hidden="true"></div>
+  <header>
+    <div class="navbar">
+      <a class="brand" href="index.html" aria-label="SPARK-7, kembali ke beranda">
+        <img class="brand-logo" src="assets/spark7-wordmark.jpg" alt="SPARK 7">
+        <span class="brand-sub"><b>Indonesia Hebat</b>Initiative</span>
+      </a>
+      <nav aria-label="Navigasi utama">
+        <a href="index.html">Beranda</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="kaih.html" class="active" aria-current="page">7 KAIH</a>
+      </nav>
+      <a class="cta" href="dashboard.html">Lihat datanya <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      <button class="menu" aria-label="Buka menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>
+    </div>
+  </header>
+  <main>
+    <section class="wrap section page-top">
+      <div class="heading">
+        <h2 data-reveal>Tujuh kebiasaan, <em>satu perubahan besar.</em></h2>
+        <p class="lead" data-reveal data-delay="0.1">Tujuh Kebiasaan Anak Indonesia Hebat sebagai landasan tumbuh menjadi pribadi yang sehat, berkarakter, dan berdaya.</p>
+      </div>
+      <div class="habits">
+      <article class="habit-row" id="kaih-1" data-reveal>
+        <div class="habit-num">01</div>
+        <div class="habit-main">
+          <div class="habit-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="8"/><path d="M24 6v6M24 36v6M6 24h6M36 24h6M11.3 11.3l4.2 4.2M32.5 32.5l4.2 4.2M36.7 11.3l-4.2 4.2M15.5 32.5l-4.2 4.2"/></svg></div>
+          <div><h3>Bangun Pagi</h3><p>Memulai hari lebih awal untuk membangun kedisiplinan dan kesiapan menjalani aktivitas.</p></div>
+        </div>
+        <div class="habit-stats bars-lite">
+          <div class="mini"><span>Sikap siswa (Survei 1)</span><b>3,44</b><div class="bar-track"><i class="bar-fill" style="--v:0.8600;--c:var(--chart-1)" data-w="86.00%"></i></div></div>
+          <div class="mini"><span>Kemajuan diri: bangun pagi (Survei 4)</span><b>3,07</b><div class="bar-track"><i class="bar-fill" style="--v:0.7675;--c:var(--chart-2)" data-w="76.75%"></i></div></div>
+        </div>
+      </article>
+      <article class="habit-row" id="kaih-2" data-reveal>
+        <div class="habit-num">02</div>
+        <div class="habit-main">
+          <div class="habit-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6C25 17 31 23 42 24 31 25 25 31 24 42 23 31 17 25 6 24 17 23 23 17 24 6Z"/></svg></div>
+          <div><h3>Beribadah</h3><p>Menjalankan ibadah sesuai agama dan kepercayaan sebagai wujud syukur dan pembentukan karakter.</p></div>
+        </div>
+        <div class="habit-stats bars-lite">
+          <div class="mini"><span>Sikap siswa (Survei 1)</span><b>3,66</b><div class="bar-track"><i class="bar-fill" style="--v:0.9150;--c:var(--chart-1)" data-w="91.50%"></i></div></div>
+          <div class="mini"><span>Kemajuan diri: ibadah (Survei 4)</span><b>2,88</b><div class="bar-track"><i class="bar-fill" style="--v:0.7200;--c:var(--chart-2)" data-w="72.00%"></i></div></div>
+        </div>
+      </article>
+      <article class="habit-row" id="kaih-3" data-reveal>
+        <div class="habit-num">03</div>
+        <div class="habit-main">
+          <div class="habit-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M16 24h16"/><rect x="9" y="16" width="7" height="16" rx="2"/><rect x="32" y="16" width="7" height="16" rx="2"/><path d="M5 21v6M43 21v6"/></svg></div>
+          <div><h3>Berolahraga</h3><p>Menjaga kebugaran tubuh melalui aktivitas fisik yang teratur dan menyenangkan.</p></div>
+        </div>
+        <div class="habit-stats bars-lite">
+          <div class="mini"><span>Sikap siswa (Survei 1)</span><b>3,38</b><div class="bar-track"><i class="bar-fill" style="--v:0.8450;--c:var(--chart-1)" data-w="84.50%"></i></div></div>
+          <div class="mini"><span>Kemajuan diri: olahraga (Survei 4)</span><b>2,68</b><div class="bar-track"><i class="bar-fill" style="--v:0.6700;--c:var(--chart-2)" data-w="67.00%"></i></div></div>
+        </div>
+      </article>
+      <article class="habit-row" id="kaih-4" data-reveal>
+        <div class="habit-num">04</div>
+        <div class="habit-main">
+          <div class="habit-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 15C16 9 6 15 8 27c2 11 10 17 16 13 6 4 14-2 16-13 2-12-8-18-16-12Z"/><path d="M24 15c0-5 3-8 7-9"/></svg></div>
+          <div><h3>Makan Sehat dan Bergizi</h3><p>Memilih makanan beragam dan bergizi untuk mendukung tumbuh kembang serta energi.</p></div>
+        </div>
+        <div class="habit-stats bars-lite">
+          <div class="mini"><span>Sikap siswa (Survei 1)</span><b>3,41</b><div class="bar-track"><i class="bar-fill" style="--v:0.8525;--c:var(--chart-1)" data-w="85.25%"></i></div></div>
+          <div class="mini"><span>Kemajuan diri: pola makan (Survei 4)</span><b>2,42</b><div class="bar-track"><i class="bar-fill" style="--v:0.6050;--c:var(--chart-3)" data-w="60.50%"></i></div></div>
+        </div>
+      </article>
+      <article class="habit-row" id="kaih-5" data-reveal>
+        <div class="habit-num">05</div>
+        <div class="habit-main">
+          <div class="habit-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 12C18 8 11 8 6 10v28c5-2 12-2 18 2 6-4 13-4 18-2V10c-5-2-12-2-18 2Z"/><path d="M24 12v28"/></svg></div>
+          <div><h3>Gemar Belajar</h3><p>Menumbuhkan rasa ingin tahu dan semangat belajar, baik di sekolah maupun di luar sekolah.</p></div>
+        </div>
+        <div class="habit-stats bars-lite">
+          <div class="mini"><span>Sikap siswa (Survei 1)</span><b>3,36</b><div class="bar-track"><i class="bar-fill" style="--v:0.8400;--c:var(--chart-1)" data-w="84.00%"></i></div></div>
+          <div class="mini"><span>Kemajuan diri: baca/belajar (Survei 4)</span><b>2,30</b><div class="bar-track"><i class="bar-fill" style="--v:0.5750;--c:var(--chart-3)" data-w="57.50%"></i></div></div>
+        </div>
+      </article>
+      <article class="habit-row" id="kaih-6" data-reveal>
+        <div class="habit-num">06</div>
+        <div class="habit-main">
+          <div class="habit-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="16" cy="17" r="5"/><circle cx="32" cy="17" r="5"/><path d="M6 38c0-8 5-11 10-11s10 3 10 11M22 38c0-8 5-11 10-11s10 3 10 11"/></svg></div>
+          <div><h3>Bermasyarakat</h3><p>Berpartisipasi, peduli, dan berkontribusi positif dalam lingkungan sekitar.</p></div>
+        </div>
+        <div class="habit-stats bars-lite">
+          <div class="mini"><span>Sikap siswa (Survei 1)</span><b>3,36</b><div class="bar-track"><i class="bar-fill" style="--v:0.8400;--c:var(--chart-1)" data-w="84.00%"></i></div></div>
+          <div class="mini"><span>Kemajuan diri: aksi sosial (Survei 4)</span><b>2,90</b><div class="bar-track"><i class="bar-fill" style="--v:0.7250;--c:var(--chart-2)" data-w="72.50%"></i></div></div>
+        </div>
+      </article>
+      <article class="habit-row" id="kaih-7" data-reveal>
+        <div class="habit-num">07</div>
+        <div class="habit-main">
+          <div class="habit-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M37 31A15 15 0 1 1 19 7a12 12 0 0 0 18 24Z"/></svg></div>
+          <div><h3>Tidur Cepat</h3><p>Membiasakan waktu istirahat yang cukup agar tubuh dan pikiran siap untuk hari berikutnya.</p></div>
+        </div>
+        <div class="habit-stats bars-lite">
+          <div class="mini"><span>Sikap siswa (Survei 1)</span><b>3,61</b><div class="bar-track"><i class="bar-fill" style="--v:0.9025;--c:var(--chart-1)" data-w="90.25%"></i></div></div>
+          <div class="mini"><span>Kemajuan diri: gadget & tidur (Survei 4)</span><b>2,65</b><div class="bar-track"><i class="bar-fill" style="--v:0.6625;--c:var(--chart-2)" data-w="66.25%"></i></div></div>
+        </div>
+      </article>
+      </div>
+      <p class="soft-note" data-reveal><strong>Cara membaca angkanya.</strong> Batang menunjukkan skor dari skala 1–4. Sikap berasal dari Survei 1 (n = 1.366), kemajuan diri dari Survei 4 (n = 487). Aspek di Survei 4 tidak persis sama dengan nama kebiasaannya, jadi kami mencocokkan yang terdekat.</p>
+    </section>
+  </main>
+  <footer>
+    <section class="wrap team-identity" aria-label="Logo tim">
+      <div class="team-wordmark"><img src="assets/spark7-wordmark.jpg" alt="SPARK 7"></div>
+      <div class="team-logos">
+        <img src="assets/hexagon-logo.png" alt="Logo SMA Negeri 2 Cianjur">
+        <img src="assets/square-logo.png" alt="Logo SPARK-7">
+      </div>
+    </section>
+    <div class="wrap foot">
+      <span><b>SPARK-7</b> · Small habits. Greater future.</span>
+      <span>Dibuat oleh tim SPARK-7 · &copy; 2026</span>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard survei · SPARK-7</title>
+  <meta name="description" content="Dashboard hasil survei kebiasaan sehat siswa kelas X–XII untuk SPARK-7.">
+  <meta name="theme-color" content="#0f1433">
+  <link rel="icon" href="assets/square-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    /* "js" hides things that will animate in. If script.js never runs, un-hide them after 4s. */
+    document.documentElement.classList.add('js');
+    setTimeout(function () { if (!window.__spark) document.documentElement.classList.remove('js'); }, 4000);
+  </script>
+</head>
+<body class="dashboard-page">
+  <div class="progress" aria-hidden="true"></div>
+  <header>
+    <div class="navbar">
+      <a class="brand" href="index.html" aria-label="SPARK-7, kembali ke beranda">
+        <img class="brand-logo" src="assets/spark7-wordmark.jpg" alt="SPARK 7">
+        <span class="brand-sub"><b>Indonesia Hebat</b>Initiative</span>
+      </a>
+      <nav aria-label="Navigasi utama">
+        <a href="index.html">Beranda</a>
+        <a href="dashboard.html" class="active" aria-current="page">Dashboard</a>
+        <a href="kaih.html">7 KAIH</a>
+      </nav>
+      <a class="cta" href="#insights">Baca temuannya <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      <button class="menu" aria-label="Buka menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>
+    </div>
+  </header>
+  <main>
+    <section class="wrap section page-top">
+      <div class="heading">
+        <h2 data-reveal>Kebiasaan sehat, <em>apa adanya.</em></h2>
+        <p class="lead" data-reveal data-delay="0.1">Apa yang siswa yakini, apa yang benar-benar mereka lakukan, dan bagian mana yang masih perlu didukung.</p>
+      </div>
+
+      <p class="source-line" data-reveal><b>Data survei sekolah</b><span>Laporan analisis 16 November 2026 · siswa kelas X–XII</span><span class="pill">4 survei · 1.366 responden S1</span></p>
+
+      <div class="stat-row">
+        <div class="stat" data-reveal><b>Sikap keseluruhan</b><strong><span data-count="3.46" data-decimals="2">3,46</span><small>/4</small></strong><span>Survei 1 · n = 1.366</span></div>
+        <div class="stat" data-reveal data-delay="0.08"><b>Setuju pada kebiasaan</b><strong>92–97%</strong><span>Rentang tujuh kebiasaan</span></div>
+        <div class="stat" data-reveal data-delay="0.16"><b>Perilaku terkuat</b><strong><span data-count="53.5" data-decimals="1" data-suffix="%">53,5%</span></strong><span>Sarapan setiap hari</span></div>
+        <div class="stat" data-reveal data-delay="0.24"><b>Area terlemah</b><strong><span data-count="2.3" data-decimals="2">2,30</span><small>/4</small></strong><span>Baca/belajar · Survei 4</span></div>
+      </div>
+
+      <div class="section-subhead" id="attitude">
+        <h3 data-reveal>Sikapnya sudah bagus.</h3>
+        <p data-reveal data-delay="0.08">Skor sikap berada di rentang 3,36–3,66 dari skala 4. Ibadah dan tidur cepat memperoleh nilai tertinggi.</p>
+      </div>
+      <div class="grid-2">
+        <article class="panel " data-reveal>
+          <div class="panel-head"><div><h3>Rata-rata sikap per kebiasaan</h3><p>Survei 1 · n = 1.366</p></div><span class="unit">Skala 1–4</span></div>
+          <div class="panel-body"><div id="attitudeChart" role="img" aria-label="Diagram batang rata-rata sikap untuk tujuh kebiasaan sehat"></div></div>
+          <div class="panel-foot"><strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 17 6-6 4 4 8-8M15 7h6v6"/></svg>Ibadah dan tidur cepat paling tinggi</strong><em>Ibadah 3,66 · Tidur cepat 3,61 · Bangun pagi 3,44 · Makan sehat 3,41 · Olahraga 3,38 · Belajar mandiri 3,36 · Kepedulian sosial 3,36.</em></div>
+        </article>
+        <article class="panel insight" data-reveal data-delay="0.1">
+          <span class="kicker">Temuan pertama</span>
+          <div class="big-stat"><span data-count="3.46" data-decimals="2">3,46</span><small>/ 4</small></div>
+          <h3>Masalahnya bukan di keyakinan.</h3>
+          <p>Mayoritas siswa menyatakan setuju pada kebiasaan sehat. Tantangannya adalah mengubah sikap positif itu menjadi rutinitas yang konsisten.</p>
+          <div class="mini-facts"><div><strong>97%</strong><span>setuju ibadah</span></div><div><strong>97%</strong><span>setuju tidur cepat</span></div><div><strong>91%</strong><span>setuju kepedulian sosial</span></div></div>
+        </article>
+      </div>
+
+      <div class="section-subhead" id="behavior">
+        <h3 data-reveal>Niat belum jadi kebiasaan.</h3>
+        <p data-reveal data-delay="0.08">Perilaku nyata yang dilaporkan siswa masih berada pada 38–53,5% untuk indikator utama.</p>
+      </div>
+      <article class="panel " data-reveal>
+          <div class="panel-head"><div><h3>Sikap dibanding perilaku nyata</h3><p>Survei 1 vs Survei 2</p></div><span class="unit">Persentase</span></div>
+          <div class="legend" aria-label="Legenda, klik untuk menyembunyikan"><button type="button" aria-pressed="true" data-target="gapChart" data-hide="hide-a" style="--c:var(--chart-1)"><i></i>Setuju (Survei 1)</button><button type="button" aria-pressed="true" data-target="gapChart" data-hide="hide-b" style="--c:var(--chart-2)"><i></i>Benar-benar melakukan (Survei 2)</button></div>
+          <div class="panel-body"><div id="gapChart" role="img" aria-label="Diagram perbandingan persentase setuju dan perilaku nyata"></div></div>
+          <div class="panel-foot"><strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 17 6-6 4 4 8-8M15 7h6v6"/></svg>Selisihnya sekitar 40–56 poin</strong><em>Persentase sikap pada grafik laporan dibulatkan: aktivitas fisik 93%, sarapan 94%, air putih 95%, belajar mandiri 94%. Perilaku nyata berasal dari Survei 2 (n = 766).</em></div>
+        </article>
+      <div class="stat-row gap-top">
+        <div class="stat" data-reveal><b>Sarapan setiap hari</b><strong><span data-count="53.5" data-decimals="1" data-suffix="%">53,5%</span></strong><span>36% hanya 0–2 hari/minggu</span></div>
+        <div class="stat" data-reveal data-delay="0.08"><b>Aktivitas fisik ≥3 hari/minggu</b><strong><span data-count="47" data-decimals="1" data-suffix="%">47,0%</span></strong><span>Belum mencapai setengah responden</span></div>
+        <div class="stat" data-reveal data-delay="0.16"><b>Air putih ≥2 L/hari</b><strong><span data-count="44.4" data-decimals="1" data-suffix="%">44,4%</span></strong><span>31% minum ≤1 liter</span></div>
+        <div class="stat" data-reveal data-delay="0.24"><b>Belajar mandiri ≥30 menit/hari</b><strong><span data-count="38" data-decimals="1" data-suffix="%">38,0%</span></strong><span>65,5% hanya 0–2 hari/minggu</span></div>
+      </div>
+
+      <div class="section-subhead" id="progress">
+        <h3 data-reveal>Bagian mana yang paling berat?</h3>
+        <p data-reveal data-delay="0.08">Penilaian kemajuan diri menunjukkan pola serupa: baca/belajar dan pola makan menjadi dua aspek dengan rata-rata terendah.</p>
+      </div>
+      <div class="grid-2">
+        <article class="panel " data-reveal>
+          <div class="panel-head"><div><h3>Penilaian kemajuan diri</h3><p>Survei 4 · n = 487</p></div><span class="unit">Skala 1–4</span></div>
+          <div class="panel-body"><div id="progressChart" role="img" aria-label="Diagram batang penilaian kemajuan diri pada tujuh aspek"></div></div>
+          <div class="panel-foot"><strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 17 6-6 4 4 8-8M15 7h6v6"/></svg>Baca/belajar dan pola makan paling rendah</strong><em>Bangun pagi 3,07 · aksi sosial 2,90 · ibadah 2,88 · olahraga 2,68 · gadget &amp; tidur 2,65 · pola makan 2,42 · baca/belajar 2,30.</em></div>
+        </article>
+        <article class="panel " data-reveal data-delay="0.1">
+          <div class="panel-head"><div><h3>Siapa yang ikut?</h3><p>Profil responden · Survei 1</p></div><span class="unit">Jenis kelamin</span></div>
+          <div class="panel-body"><div class="donut-layout"><div id="profileChart" role="img" aria-label="Diagram donat komposisi responden berdasarkan jenis kelamin"></div><div class="dlegend"><div><i style="background:var(--chart-1)"></i><span>Perempuan</span><strong>776 · 56,8%</strong></div><div><i style="background:var(--chart-2)"></i><span>Laki-laki</span><strong>590 · 43,2%</strong></div></div></div></div>
+          <div class="panel-foot"><em style="margin-top:0">Total 1.366 siswa. Usia responden 14–18 tahun; umur rata-rata sekitar 16 tahun.</em></div>
+        </article>
+      </div>
+
+      <div class="section-subhead" id="groups">
+        <h3 data-reveal>Kelas XI perlu perhatian lebih.</h3>
+        <p data-reveal data-delay="0.08">Kelas XI konsisten menjadi kelompok dengan skor sikap terendah dan disebut sebagai kelompok prioritas dalam laporan.</p>
+      </div>
+      <div class="grid-2">
+        <article class="panel " data-reveal>
+          <div class="panel-head"><div><h3>Skor sikap total per tingkat</h3><p>Survei 1 · per kelas</p></div><span class="unit">Skala 1–4</span></div>
+          <div class="panel-body"><div id="gradeChart" role="img" aria-label="Diagram batang skor sikap kelas X, XI, dan XII"></div></div>
+          <div class="panel-foot"><strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 17 6-6 4 4 8-8M15 7h6v6"/></svg>Kelas XI paling rendah</strong><em>Kelas X: 3,46 (n = 498) · Kelas XI: 3,39 (n = 508) · Kelas XII: 3,57 (n = 360). Perbedaan signifikan, p &lt; 0,001.</em></div>
+        </article>
+        <article class="panel insight" data-reveal data-delay="0.1">
+          <span class="kicker">Kelompok prioritas</span>
+          <div class="big-stat"><span data-count="3.39" data-decimals="2">3,39</span><small>/ 4</small></div>
+          <h3>Kelas XI jadi fokus.</h3>
+          <p>Laporan mencatat kelas XI memiliki skor sikap terendah, tidur paling larut, dan sarapan paling jarang. Lima kelas dengan skor terendah semuanya berasal dari kelas XI.</p>
+          <div class="callout"><b>Arah yang disarankan</b>Pendampingan, target mingguan, dan dukungan wali kelas.</div>
+        </article>
+      </div>
+
+      <div class="section-subhead" id="motivation">
+        <h3 data-reveal>Kemajuan butuh alasan.</h3>
+        <p data-reveal data-delay="0.08">Target nilai/skor berkaitan dengan indeks kemajuan rata-rata tertinggi pada data motivator.</p>
+      </div>
+      <article class="panel " data-reveal>
+          <div class="panel-head"><div><h3>Motivator dan indeks kemajuan diri</h3><p>Survei 3 &amp; Survei 4</p></div><span class="unit">Skala 1–4</span></div>
+          <div class="panel-body"><div id="motivationChart" role="img" aria-label="Diagram batang indeks kemajuan diri menurut motivator"></div></div>
+          <div class="panel-foot"><strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 17 6-6 4 4 8-8M15 7h6v6"/></svg>Target nilai/skor paling tinggi</strong><em>Target nilai/skor n=107 (3,13) · Ajakan teman n=50 (2,73) · Kesadaran pribadi n=285 (2,58) · Pantauan orang tua n=44 (2,36). Hubungan ini bukan bukti sebab-akibat.</em></div>
+        </article>
+
+      <div class="section-subhead" id="correlations">
+        <h3 data-reveal>Kebiasaan saling berkaitan.</h3>
+        <p data-reveal data-delay="0.08">Korelasi Spearman menunjukkan beberapa hubungan sedang, tetapi seluruh temuan harus dibaca sebagai keterkaitan, bukan sebab-akibat.</p>
+      </div>
+      <article class="panel " data-reveal>
+          <div class="panel-head"><div><h3>Hubungan antarindikator pilihan</h3><p>Korelasi Spearman</p></div><span class="unit">ρ (rho)</span></div>
+          <div class="panel-body"><div id="correlationChart" role="img" aria-label="Grafik korelasi Spearman antar indikator"></div></div>
+          <div class="panel-foot"><strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 17 6-6 4 4 8-8M15 7h6v6"/></svg>Terkuat: sikap total dengan kemajuan diri</strong><em>Korelasi terkuat yang dilaporkan: skor sikap total dengan kemajuan diri (ρ = +0,46). Hubungan tidur larut dengan durasi tidur bernilai negatif (ρ = −0,32).</em></div>
+        </article>
+
+      <div class="section-subhead" id="insights">
+        <h3 data-reveal>Dari temuan ke tindakan.</h3>
+        <p data-reveal data-delay="0.08">Rekomendasi berikut mengikuti prioritas yang tercantum dalam laporan analisis.</p>
+      </div>
+      <div class="recs">
+        <article class="rec" data-reveal><span>01</span><div><h4>Prioritaskan pendampingan kelas XI</h4><p>Gunakan target mingguan, pendampingan, dan dukungan wali kelas.</p></div><small>Skor terendah di hampir semua aspek</small></article>
+        <article class="rec" data-reveal><span>02</span><div><h4>Ubah niat menjadi rutinitas kecil</h4><p>Tetapkan target terukur, misalnya olahraga 20 menit selama tiga hari per minggu, lalu pantau secara berkala.</p></div><small>Sikap tinggi, perilaku utama 38–53,5%</small></article>
+        <article class="rec" data-reveal><span>03</span><div><h4>Dorong sarapan dan konsumsi air putih</h4><p>Bangun gerakan sarapan dan kebiasaan membawa air putih di sekolah.</p></div><small>Sarapan 53,5% · air ≥2 liter 44,4%</small></article>
+        <article class="rec" data-reveal><span>04</span><div><h4>Bangun budaya belajar mandiri</h4><p>Jadwalkan literasi harian dan kegiatan belajar berbasis proyek.</p></div><small>Penilaian baca/belajar 2,30 dari 4</small></article>
+        <article class="rec" data-reveal><span>05</span><div><h4>Perhatikan batas layar dan waktu tidur</h4><p>Dorong rutinitas tidur sebelum pukul 22.00 dan kurangi penggunaan gawai menjelang tidur.</p></div><small>36,7% tidur pukul 22.00 atau lebih larut</small></article>
+        <article class="rec" data-reveal><span>06</span><div><h4>Gunakan target capaian dan teman sebaya</h4><p>Libatkan teman sebagai pendukung dan jangan hanya mengandalkan pemantauan orang tua.</p></div><small>Indeks target nilai/skor 3,13</small></article>
+        <article class="rec" data-reveal><span>07</span><div><h4>Buat kegiatan olahraga yang inklusif</h4><p>Dorong partisipasi siswi melalui aktivitas yang mereka sukai.</p></div><small>Durasi olahraga siswi 2,25 vs laki-laki 3,00</small></article>
+      </div>
+
+      <aside class="notes" data-reveal>
+        <h3>Cara membaca dashboard ini</h3>
+        <p>Empat survei memiliki jumlah responden dan jenis data yang berbeda: Survei 1 (1.366, sikap), Survei 2 (766, perilaku), Survei 3 (558, motivasi), dan Survei 4 (487, kemajuan diri). Angka dari survei berbeda tidak selalu berasal dari responden yang sama.</p>
+        <p>Survei 2 dan 4 berdasarkan pengakuan siswa. Korelasi menunjukkan keterkaitan, bukan bukti sebab-akibat. Laporan juga mencatat beberapa keterbatasan kualitas data, termasuk jawaban seragam pada Survei 1 dan kategori jam bangun yang ambigu.</p>
+        <p class="src">Sumber: <strong>Laporan Analisis Statistik Survei Kebiasaan Sehat Siswa Kelas X–XII</strong>, 16 November 2026. Dashboard ini menyajikan ulang angka dari laporan, bukan data mentah.</p>
+      </aside>
+    </section>
+  </main>
+  <footer>
+    <section class="wrap team-identity" aria-label="Logo tim">
+      <div class="team-wordmark"><img src="assets/spark7-wordmark.jpg" alt="SPARK 7"></div>
+      <div class="team-logos">
+        <img src="assets/hexagon-logo.png" alt="Logo SMA Negeri 2 Cianjur">
+        <img src="assets/square-logo.png" alt="Logo SPARK-7">
+      </div>
+    </section>
+    <div class="wrap foot">
+      <span><b>SPARK-7</b> · Small habits. Greater future.</span>
+      <span>Dibuat oleh tim SPARK-7 · &copy; 2026</span>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
